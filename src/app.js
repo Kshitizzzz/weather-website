@@ -6,6 +6,7 @@ const hbs = require('hbs');             //partials -> allows u to create little 
 const forecast = require('./utils/forecast');
 const geoCode = require('./utils/geoCode')
 
+const port = process.env.PORT || 3000
 
 const app = express();
 
@@ -125,6 +126,6 @@ app.get('*', (req, res) => {                   // if no routes find , display an
 // app.com/help
 // app.com/about
 
-app.listen(3000, () => {       //this starts up a server and has it listen on a specific port
-    console.log('Server is up on port 3000')
+app.listen(port, () => {       //this starts up a server and has it listen on a specific port
+    console.log('Server is up on port ' + port)
 })
