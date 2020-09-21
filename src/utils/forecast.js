@@ -11,7 +11,7 @@ const forecast = (latitude,longitude,callback)=>{
             callback('Unable to find Loacation',undefined)
         }
         else{
-            callback(undefined,response.body.current.weather_descriptions[0] + '. It is currently ' + response.body.current.temperature + " degree fahrenheit and it feels like " + response.body.current.feelslike + " degree fahrenheit .")
+            callback(undefined,response.body.current.weather_descriptions[0] + '. It is currently ' + response.body.current.temperature + " degree fahrenheit and it feels like " + response.body.current.feelslike + " degree fahrenheit ." + " Local Time is "+ response.body.location.localtime +".")
         } 
     }) 
 }
