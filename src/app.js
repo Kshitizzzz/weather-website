@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, '../public')))         //  its a way
 app.get('', (req, res) => {                      // to run views use nodemon /src/app.js ...dont be inside src folder directly
     res.render('index', {                    // render allows us to render our views..here index is the hbs file in views folder(first param) , second param is general object that we can use in hbs file
         title: "Weather",
-        name: "Type the Location and get the Weather details"
+        name: "Kshitiz Agarwal"
     });
 })
 
